@@ -1,8 +1,47 @@
-.hello-test {
-  font-size: 24px;
-  color: red;
+body {
+  background-color: white;
 }
 
-.test-tag-line {
-  margin-top: 12px;
+.layout {
+  max-width: 100%;
+  overflow: none;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.hero-image-container {
+  background-image: url("./assets/puppy-on-cushion.JPG");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  overflow: none;
+}
+
+.text-container {
+  /* background-color: rgba(0, 0, 0, .1);
+  color: white; */
+  color: black;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 24px;
+}
+
+.images-wrapper {
+  margin: auto;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px;
+}
+
+.image-wrapper {
+  width: 25%;
+  padding-right: 12px;
+  box-sizing: border-box;
+  overflow: none;
+}
+
+.image-wrapper img {
+  width: 100%;
 }
