@@ -19,8 +19,6 @@ body {
 }
 
 .text-container {
-  /* background-color: rgba(0, 0, 0, .1);
-  color: white; */
   color: black;
   box-sizing: border-box;
   width: 50%;
