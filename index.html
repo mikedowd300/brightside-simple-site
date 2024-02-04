@@ -1,54 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Brightside Golden</title>
 <link rel="stylesheet" href="main.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans" rel="stylesheet">
 </head>
 <body>
-  <div class="layout">
-    <div class="text-container">
-      <h1>
-        Welcome to Brightside English Goldens!
-      </h1>
-      <p>
-        Here at Brightside, our goal is simple but lofty! To raise the “Cream of the Creams”: ideal family members, with a sweet, trainable, therapy type temperament, correct “European standard” conformation, and thorough health and genetic testing to help them live their best life with their forever families!
-      </p>
-      <p>
-        Our Golden journey began in 2015 with our first Goldie, Bruce. We absolutely fell in love with this wonderful breed. It is no wonder they inspire so much loyalty! With their intelligence, loyalty, personality and that special attunement to people…Goldens are just special! 
-      </p>
-      <p>
-        It was a good time in our family’s life to allow a lifelong obsession with raising dogs in the country to be accomplished, and raising puppies for us is now a total family endeavor. 
-        We are there with them from their first breath, to the day we place them in the arms of their forever families. 
-      </p>
-      <p>
-        When I visited Europe, and saw the Goldens there, which are slightly blockier, stockier, and often lighter (the European standard allows for a cream colored dog) than the American bred dogs, I decided that was the direction I wanted to go. 
-      </p>
-      <p>
-        We have learned a lot along the way and we continue to research! We undertake several different protocols to help our pups become ideal family members. We socialize our pups with our extended family and friends, and practice Early Neurological Stimulation, (which has many benefits: a more graduated stress response in your adult dog, improved trainability, and a stronger immune system), as well as starting them on potty training, and name recall.
-      </p>
-      <p>
-        Our parents have all their health clearances (hips, elbows, eyes and heart) and genetic testing done for the common genetic diseases which affect Goldens, so pups are guaranteed clear/unaffected, including for both ICT 1 & 2 (the recently discovered, nastier version of ICT in Goldens.) 
-      </p>
-      <p>
-        We offer a health guarantee and pups go home throughly vet checked, with first shots and de-worming done.
-      </p>
-      <p>
-        Our Spring 2023 pups are here! Both of our Mamas had a litter just one day apart at the beginning of April. Pups are just opening their eyes…they will be ready for puppy visit/selection beginning May 5, and will be ready to go home the weekend of May 26th.
-      </p>
-    </div>
-    <div class="hero-image-container"></div>
+  <div class="header">
+    <h1>
+      Some awesome cool title goes here!
+    </h1>
+    <p class="tag-line"><i>maybe a tagline goes here</i></p>
   </div>
-  <div class="images-wrapper">
-    <div class="image-wrapper"><img src="assets/img-1.JPG" alt=""></div>
-    <div class="image-wrapper"><img src="assets/img-2.PNG" alt=""></div>
-    <div class="image-wrapper"><img src="assets/img-3.PNG" alt=""></div>
-    <div class="image-wrapper"><img src="assets/img-4.PNG" alt=""></div>
-    <div class="image-wrapper"><img src="assets/img-5.PNG" alt=""></div>
-    <div class="image-wrapper"><img src="assets/img-6.PNG" alt=""></div>
-    <div class="image-wrapper"><img src="assets/img-7.PNG" alt=""></div>
-    <div class="image-wrapper"><img src="assets/img-8.PNG" alt=""></div>
-    <div class="image-wrapper"><img src="assets/img-9.PNG" alt=""></div>
-    <div class="image-wrapper"><img src="assets/img-10.PNG" alt=""></div>
+  <div id="modal">
+    <button class="close-modal" onclick="toggleModal()">x</button>
+    <div id="modal-content"></div>
+  </div>
+  <div id="home">
+    <div class="layout">
+      <div class="mission-statement">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <div class="dog-links-wrapper">
+          <!-- <img class="background-image" src="assets/adorbs.jpg" alt="adorable puppy"> -->
+          <h2>We have Spring puppies!</h2>
+          <button onclick="navigate('current-litters')" class="nav-link">Meet Our Litters</button>
+          <button onclick="navigate('studs')" class="nav-link">Meet Our Boys</button>
+          <button onclick="navigate('femails')" class="nav-link">Meet Our Girls</button>
+        </div>
+      </div>
+      <div class="hero-image-container">
+        <img src="assets/fireside-puppies.jpg" alt="fireside puppies">
+      </div>
+    </div>
+  </div>
+  <div id="current-litters">
+    <div class="nav-links">
+      <button onclick="navigate('home')" class="nav-link">Home</button>
+      <button onclick="navigate('studs')" class="nav-link">Studs</button>
+      <button onclick="navigate('femails')" class="nav-link">Mamas</button>
+    </div>
+  </div>
+  <div id="studs">
+    <div class="nav-links">
+      <button onclick="navigate('home')">Home</button>
+      <button onclick="navigate('current-litters')">Current Litters</button>
+      <button onclick="navigate('femails')">Mamas</button>
+    </div>
+  </div>
+  <div id="femails">
+    <div class="nav-links">
+      <button onclick="navigate('home')">Home</button>
+      <button onclick="navigate('current-litters')">Current Litters</button>
+      <button onclick="navigate('studs')">Studs</button>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-link">About Us</div>
+    <div class="footer-link">FAQs</div>
+    <div class="footer-link">Contact Us</div>
   </div>
 </body>
 <script src="app.js"></script>
