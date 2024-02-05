@@ -66,41 +66,12 @@ body {
   background-color: rgba(0, 0, 0, .9);
 }
 
-.dog-links-wrapper {
-  border: 2px solid white;
-  padding: 12px;
-  border-radius: 4px;
-  min-width: 315px;
-  /* background-color: transparent; */
-  position: relative;
-  overflow: hidden;
-  background-image: url("assets/adorbs.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-shadow: 1px 1px white;
-  background-color: rgba(255, 255, 255, .1);
-}
-
 .dog-links-wrapper .background-image {
   z-index: -1;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.dog-links-wrapper h2 {
-  max-width: 400px;
-  text-decoration: underline;
-  text-shadow: 2px 2px 2px black;
-  border-radius: 6px;
-}
-
-.dog-links-wrapper .nav-link {
-  text-shadow: 2px 2px 2px black;
-  border: none;
-  display: block;
 }
 
 .mission-statement {
@@ -118,7 +89,6 @@ body {
   padding: 12px;
   border-radius: 4px;
   min-width: 315px;
-  /* background-color: transparent; */
   position: relative;
   overflow: hidden;
   background-image: url("assets/two-cute.jpg");
@@ -144,8 +114,6 @@ body {
 }
 
 .dog-links-wrapper .nav-link:hover {
-  cursor: pointer;
-  color: black;
   text-shadow: 2px 2px 2px white;
 }
 
@@ -165,6 +133,7 @@ body {
 }
 
 .nav-link:hover {
+  cursor: pointer;
   color: black;
 }
 
@@ -208,6 +177,10 @@ body {
   border-radius: 4px;
 }
 
+.clearance-title {
+  font-weight: 900;
+}
+
 .footer {
   background-color: black;
   padding: 12px 12px 36px 12px;
@@ -226,17 +199,7 @@ body {
   cursor: pointer;
 }
 
-/* #home {} */
-
-#current-litters {
-  display: none;
-}
-
-#studs {
-  display: none;
-}
-
-#femails {
+#current-litters, #studs, #femails {
   display: none;
 }
 
