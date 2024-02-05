@@ -1,5 +1,47 @@
 body {
   background-color: white;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.header {
+  background-color: black;
+  padding: 12px 0;
+  color: white;
+  text-align: center;
+}
+
+.header h1, .header .tag-line {
+  margin: 0;
+}
+
+#modal {
+  padding: 16px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 90px;
+  left: 12px;
+  height: calc(100vh - 24px - 90px);
+  width: calc(100% - 36px);
+  display: none;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  flex-direction: column;
+}
+
+.close-modal {
+  padding-left: calc(100% - 18px);
+  border: none;
+  background-color: white;
+  height: 30px;
+  font-size: 24px;
+}
+
+.close-modal:hover {
+  cursor: pointer;
 }
 
 .layout {
@@ -16,36 +58,17 @@ body {
 }
 
 .hero-image-container {
-  background-image: url("assets/puppy-on-cushion.JPG");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 50%;
   overflow: none;
-}
-
-<<<<<<< Updated upstream
-.text-container {
-  /* background-color: rgba(0, 0, 0, .1);
-  color: white; */
-  color: black;
-  box-sizing: border-box;
-  width: 50%;
-  padding: 24px;
-}
-
-.images-wrapper {
-=======
-.mission-statement {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
   background-color: rgba(0, 0, 0, .9);
-  /* background-color: blanchedalmond; */
-  color: white;
-  box-sizing: border-box;
-  width: 50%;
-  padding: 24px;
-  font-size: 20px;
-  line-height: 24px;
 }
+
+/* .mission-statement {
+  background-color: rgba(0, 0, 0, .9);
+  color: white; */
 
 .dog-links-wrapper {
   border: 2px solid white;
@@ -55,7 +78,7 @@ body {
   /* background-color: transparent; */
   position: relative;
   overflow: hidden;
-  background-image: url("assets/two-cute.jpg");
+  background-image: url("assets/adorbs.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -80,6 +103,53 @@ body {
 
 .dog-links-wrapper .nav-link {
   text-shadow: 2px 2px 2px black;
+  border: none;
+  display: block;
+}
+
+.mission-statement {
+  background-color: rgba(0, 0, 0, .9);
+  color: white;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 24px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.dog-links-wrapper {
+  border: 2px solid white;
+  padding: 12px;
+  border-radius: 4px;
+  min-width: 315px;
+  /* background-color: transparent; */
+  position: relative;
+  overflow: hidden;
+  background-image: url("assets/two-cute.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 1px 1px white;
+  background-color: rgba(255, 255, 255, .1);
+}
+
+/* .dog-links-wrapper .background-image {
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+.dog-links-wrapper h2 {
+  max-width: 400px;
+  text-decoration: underline;
+  text-shadow: 2px 2px 2px black;
+  border-radius: 6px;
+}
+
+.dog-links-wrapper .nav-link {
+  text-shadow: 2px 2px 2px black;
   display: block;
   padding: 6px 0;
   color: white;
@@ -91,6 +161,11 @@ body {
   text-shadow: 2px 2px 2px white;
 }
 
+/* .nav-link {
+  background-color: transparent;
+  padding: 6px 0;
+  font-size: 20px;
+  color: white; */
 .nav-links {
   display: flex;
   justify-content: center;
@@ -183,7 +258,7 @@ body {
 }
 
 /* .images-wrapper {
->>>>>>> Stashed changes
+>>>>>>> 27b40a0 (Started the litters page)
   margin: auto;
   max-width: 100%;
   display: flex;
@@ -200,8 +275,7 @@ body {
 
 .image-wrapper img {
   width: 100%;
-<<<<<<< Updated upstream
-=======
+<<<<<<< HEAD
 } */
 
 @media screen and (max-width: 949px) {
@@ -263,5 +337,4 @@ body {
       font-size: 20px;
     }
   }
->>>>>>> Stashed changes
 }
