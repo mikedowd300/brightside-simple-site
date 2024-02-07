@@ -30,13 +30,62 @@ const tagLineTextMap = {
   'femails': ''
 }
 
+const slideShowMap = {
+  'thor': ['adorbs.jpg', 'flower-puppies-sleeping.PNG', 'two-cute.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
+  'cap': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
+  'heavy-d': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
+  'hulk': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
+  'rocket': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
+  'star-lord': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
+  'spidey': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
+  'gamora': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
+  'loki': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
+  'samuel': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
+  'taco': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
+}
+
 const currentLittersData = [litter1, litter2];
 
 const navigate = target => {
   const pages = ['home', 'current-litters', 'studs', 'femails'];
   const filteredPages = pages.filter(page => page !== target);  
-  const modal = document.getElementById(target).style.setProperty('display', 'flex');
+  document.getElementById(target).style.setProperty('display', 'flex');
   filteredPages.forEach(page => document.getElementById(page).style.setProperty('display', 'none'));
   header.innerHTML = heaterTextMap[target];
   tagLine.innerHTML = tagLineTextMap[target];
+  window.scrollTo(0, 0);
 }
+
+const slideShow = (target, interval = 4000) => {
+  let opacity = 0;
+  const file = 'assets'; 
+  const slides = slideShowMap[target];
+  const elem = document.getElementsByClassName(target)[0];
+  const elem2 = document.getElementsByClassName(target + '-2')[0];
+  elem2.setAttribute('src', `${file}/${slides[1]}`);
+  elem.style.setProperty('opacity', opacity);
+  setInterval(() => {
+    opacity = opacity === 1 ? 0 : 1;
+    elem.style.setProperty('opacity', opacity);
+    setTimeout(() => {
+      console.log('timeout');
+      if(opacity === 0) {
+        elem.setAttribute('src', `${file}/${slides[0]}`);
+      } else if(opacity === 1) {
+        elem2.setAttribute('src', `${file}/${slides[0]}`);
+      }
+      slides.unshift(slides.pop());
+    }, interval / 2);
+  }, interval);
+}
+
+// TODOS 
+// ________________________________________
+// - SLIDESHOW, 
+//   1) ADD A FADEIN / FADEOUT AFFECT
+//   2) STOP SLIDESHOW
+//   3) POSITION SLIDESHOW BUTTONS
+// ________________________________________
+// - OUR BOYS
+// ________________________________________
+// - OUR GIRLS
