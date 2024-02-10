@@ -57,6 +57,55 @@ body {
   flex-direction: column;
 }
 
+.accordion {
+  margin: 16px;
+}
+
+.accordion .accordion-item {
+  padding: 16px;
+  margin: 0;
+  border: 1px solid black;
+  background-color: antiquewhite;
+}
+
+.accordion .accordion-item:last-child:not(:first-child) {
+  border-top: none;
+}
+
+.accordion .accordion-item .scrollable-content {
+  transition: height 500ms;
+  min-height: 0;
+  overflow: scroll;
+}
+
+.accordion .accordion-item .scrollable-content.closed {
+  height: 0;
+}
+
+.accordion .accordion-item .scrollable-content.open {
+  height: 420px;
+  min-width: 0;
+}
+
+.accordion .accordion-item .closed-accordion-wrapper {
+  /* transition: height 100ms; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.closed-accordion-wrapper p {
+  margin: 0;
+}
+
+/* .closed-accordion-wrapper button {
+  border: none;
+  background-color: transparent;
+} */
+
+.accordion .accordion-item .closed-accordion-wrapper:hover, .closed-accordion-wrapper span:hover {
+  cursor: pointer;
+}
+
 .hero-image-container {
   width: 50%;
   overflow: none;
@@ -146,6 +195,11 @@ body {
   display: none;
 }
 
+.border-line.always-display {
+  display: block;
+  border-bottom: 1px solid black;
+}
+
 .litter-header {
   padding: 0 12px;
   display: flex;
@@ -185,10 +239,6 @@ body {
   max-width: 350px;
 }
 
-/* .parent-name.desktop, .parent-fancy-name.desktop {
-
-}  */
-
 .parent-name.tablet, .parent-fancy-name.tablet {
   display: none;
 }
@@ -223,14 +273,14 @@ body {
   margin: 6px 6px;
 }
 
-.litter-puppy .slide-show-wrapper {
+.litter-puppy .slide-show-wrapper, .parent .slide-show-wrapper {
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
   position:relative;
 }
 
-.litter-puppy img.left {
+.litter-puppy img.left, .parent img.left {
   width: 100%;
   border-radius: 4px;
   margin-left: 0;
@@ -239,7 +289,7 @@ body {
   transition: opacity 500ms;
 }
 
-.litter-puppy img.right {
+.litter-puppy img.right, .parent img.right {
   position: absolute;
   top: 0;
   left: 0;
@@ -248,7 +298,7 @@ body {
   z-index: 1;
 }
 
-.litter-puppy button.slide-show {
+.litter-puppy button.slide-show, .parent button.slide-show  {
   margin: -18px 0 0 4px;
   border: none;
   padding: none;
@@ -256,7 +306,7 @@ body {
   background-color: rgba(255, 255, 255, .2);
 }
 
-.litter-puppy button.slide-show:hover {
+.litter-puppy button.slide-show:hover, .parent button.slide-show:hover {
   cursor: pointer;
 }
 
