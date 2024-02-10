@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
   <div class="header">
@@ -45,9 +47,96 @@
         <button onclick="navigate('studs')" class="nav-link">Our Boys</button>
         <button onclick="navigate('femails')" class="nav-link">Our Girls</button>
       </div>
-      <div class="scrollable-content">
+      <div class="scrollable-content born">
+        <div class="accordion">
+          <h2 class="status">Upcoming Litters</h2>
+          <div class="accordion-item">
+            <div class="closed-accordion-wrapper closed" onclick="expand(this)">
+              <p>Buddy and Lexi, coming mid March</p>
+              <span class="material-symbols-outlined">expand_more</span>
+            </div>
+            <div class="scrollable-content closed">
+              <div class="litter-header">
+                <h2 class="status">Hookin' up soon!!</h2>
+                <p class="planned-arrival-date">These two should have a litter on the ground by early Summer</p>
+              </div>
+              <div class="border-line"></div>
+              <div class="parents-wrapper">
+                <div class="parent">
+                  <p class="parent-name tablet">Meet Mom: Momo</p>
+                  <p class="parent-fancy-name tablet">Officially known as Chameaux</p>
+                  <img src="assets/momo.PNG" alt="">
+                  <div class="info-wrapper">
+                    <p class="parent-name desktop">Meet Mom: Momo</p>
+                    <p class="parent-fancy-name desktop">Officially known as Chameaux</p>
+                    <div class="description">Momo is kinda Stupid, like her mom, but super sweet and she has a chameaux-hawk, which is actually kinda bad-ass.</div>
+                  </div>
+                  <div class="slide-show"></div>
+                </div>
+  
+                <div class="parent">
+                  <div class="border-line"></div>
+                  <p class="parent-name tablet">Meet Dad: Buddy</p>
+                  <p class="parent-fancy-name tablet">Also known as "Lord Buddy of Chutney"</p>
+                  <img src="assets/buddy.PNG" alt="">
+                  <div class="info-wrapper">
+                    <p class="parent-name desktop">Meet Dad: Buddy</p>
+                    <p class="parent-fancy-name desktop">Also known as "Lord Buddy of Chutney"</p>
+                    <div class="description">He's a lover not a fighter, definately not a fighter</div>
+                  </div>
+                  <div class="border-line bottom"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="accordion-item">
+            <div class="closed-accordion-wrapper closed" onclick="expand(this)">
+              <p>Max and Rosie, Coming in May</p>
+              <span class="material-symbols-outlined">expand_more</span>
+            </div>
+            <div class="scrollable-content closed">
+              <div class="litter-header">
+                <h2 class="status">Mamma's been knocked-up</h2>
+                <p class="expecting-arrival-date">We are expecting them in early March.</p>
+                <p class="expecting-ready-date">They should be ready to go home at the end of April</p>
+              </div>
+              <div class="border-line"></div>
+              <div class="parents-wrapper">
+                <div class="parent">
+                  <p class="parent-name tablet">Meet Mom: Momo</p>
+                  <p class="parent-fancy-name tablet">Officially known as Chameaux</p>
+                  <img src="assets/momo.PNG" alt="">
+                  <div class="info-wrapper">
+                    <p class="parent-name desktop">Meet Mom: Momo</p>
+                    <p class="parent-fancy-name desktop">Officially known as Chameaux</p>
+                    <div class="description">Momo is kinda Stupid, like her mom, but super sweet and she has a chameaux-hawk, which is actually kinda bad-ass.</div>
+                  </div>
+                  <div class="slide-show"></div>
+                </div>
+  
+                <div class="parent">
+                  <div class="border-line"></div>
+                  <p class="parent-name tablet">Meet Dad: Buddy</p>
+                  <p class="parent-fancy-name tablet">Also known as "Lord Buddy of Chutney"</p>
+                  <img src="assets/buddy.PNG" alt="">
+                  <div class="info-wrapper">
+                    <p class="parent-name desktop">Meet Dad: Buddy</p>
+                    <p class="parent-fancy-name desktop">Also known as "Lord Buddy of Chutney"</p>
+                    <div class="description">He's a lover not a fighter, definately not a fighter</div>
+                  </div>
+                  <div class="border-line bottom"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="border-line bottom always-display"></div>
+
         <div class="litter-header">
-          <h2 class="status">Come Meet Them Today!!</h2>
+          <h2 class="status">Our Current Litter</h2>
+          <p class="status">Come Meet Them Today!!</p>
           <p class="arrival-date">Born: January 3, 2024</p>
           <p class="ready-date">Ready to go Home: February 29, 2024</p>
         </div>
@@ -217,11 +306,64 @@
     <div class="studs-layout layout">
       <div class="nav-links">
         <button onclick="navigate('home')" class="nav-link">Home</button>
-        <button onclick="navigate('current-litters')" class="nav-link">Current Litters</button>
+        <button onclick="navigate('current-litters')" class="nav-link">Our Litters</button>
         <button onclick="navigate('femails')" class="nav-link">Our Girls</button>
       </div>
       <div class="scrollable-content">
-        content
+        <div class="litter-header">
+          <h2 class="status">Our Stud Dogs</h2>
+        </div>
+        <div class="border-line"></div>
+        <div class="parents-wrapper">
+          <div class="parent">
+            <p class="parent-name tablet">Max</p>
+            <p class="parent-fancy-name tablet">Officially known as Maximus Destroyer of worlds</p>
+            <div class="slide-show-wrapper">
+              <img src="assets/momo.PNG" alt="" class="max left">
+              <img src="" alt="" class="max-2 right">
+              <button class="slide-show" onclick="slideShow('max')">Slide Show</button>
+            </div>
+            <div class="info-wrapper">
+              <p class="parent-name desktop">Max</p>
+              <p class="parent-fancy-name desktop">Officially known as Maximus Destroyer of worlds</p>
+              <p class="mama-registration-number">ABCD-1234</p>
+              <div class="description">The ladies are definately fans.</div>
+              <div class="clearances">
+                <div>
+                  <p class="clearance-title">OFA Clearances:</p>
+                  <p>Ofa ipusu ad nauseum</p>
+                  <p class="clearance-title">Genetic Clearances</p>
+                  <p>Genetic ipsum and thensum</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide-show"></div>
+          </div>
+          <div class="parent">
+            <div class="border-line"></div>
+            <p class="parent-name tablet">Buddy</p>
+            <p class="parent-fancy-name tablet">Also known as "Lord Buddy of Chutney"</p>
+            <div class="slide-show-wrapper">
+              <img src="assets/buddy.PNG" alt="" class="buddy left">
+              <img src="" alt="" class="buddy-2 right">
+              <button class="slide-show" onclick="slideShow('buddy')">Slide Show</button>
+            </div>
+            <div class="info-wrapper">
+              <p class="parent-name desktop">Buddy</p>
+              <p class="parent-fancy-name desktop">Also known as "Lord Buddy of Chutney"</p>
+              <p class="sire-registration-number">ABCD-4321</p>
+              <div class="description">He's a lover not a fighter, definately a lover</div>
+              <div class="clearances">
+                <div>
+                  <p class="clearance-title">OFA Clearances</p>
+                  <p>Ofa ipusu ad nauseum</p>
+                  <p class="clearance-title">Genetic Clearances</p>
+                  <p>Genetic ipsum and then some</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -230,7 +372,7 @@
     <div class="femails-layout layout">
       <div class="nav-links">
         <button onclick="navigate('home')" class="nav-link">Home</button>
-        <button onclick="navigate('current-litters')" class="nav-link">Current Litters</button>
+        <button onclick="navigate('current-litters')" class="nav-link">Our Litters</button>
         <button onclick="navigate('studs')" class="nav-link">Our Boys</button>
       </div>
       <div class="scrollable-content"></div>
@@ -243,7 +385,6 @@
     <div class="footer-link">Contact Us</div>
   </div>
 </body>
-<script src="jquery-3.7.1.min.js"></script>
 <script src="js/litters.js"></script>
 <script src="js/app.js"></script>
 </html>
