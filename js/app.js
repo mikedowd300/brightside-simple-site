@@ -114,7 +114,35 @@ expand = (elem) => {
     content.classList.add('open');
     icon.innerHTML = "expand_less"
   }
+}
 
+showContactUsModal = () => {
+  const contactUsModal = document.getElementById('contact-us-modal');
+  const classList = [ ...contactUsModal.classList];
+  if(classList.includes('hidden')) {
+    contactUsModal.classList.remove('hidden');
+  } else {
+    contactUsModal.classList.add('hidden');
+  }
+}
+
+sendMessage = () => {
+  const name = document.getElementById('contact-name').value;
+  const phoneNumber = document.getElementById('contact-phone-number').value;
+  const email = document.getElementById('contact-email').value;
+  const message = document.getElementById('contact-message').value;
+  const params = { name, email, message, phoneNumber };
+  const templateId = "template_tgpkoog";
+  const serviceId = "service_k0un4x3";
+  emailjs.send(serviceId, templateId, params)
+    .then((res) => {
+      name.value = '';
+      phoneNumber.value = '';
+      email.value = '';
+      message.value = '';
+      showContactUsModal();
+    })
+    .catch((e) => console.log('ERROR', e));
 }
 
 // TODOS 
@@ -129,6 +157,6 @@ expand = (elem) => {
 //   2) get parent element sybling with class "scrollable-content", swap open class with closed class
 //   3) close the expanded accordion item with an "X" inside the content
 // ________________________________________
-// - OUR BOYS
+// - OUR BOYS  **** DONE ****
 // ________________________________________
 // - OUR GIRLS
