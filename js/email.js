@@ -24,5 +24,29 @@
     return key
   };
   const publicKey = decodedKey(btoa('8Y9.5K619FHH1.PK_15'));
+
+  sendMessage = () => {
+    const name = document.getElementById('contact-name').value;
+    const phoneNumber = document.getElementById('contact-phone-number').value;
+    const email = document.getElementById('contact-email').value;
+    const message = document.getElementById('contact-message').value;
+    const params = { name, email, message, phoneNumber };
+    const templateId = "template_tgpkoog";
+    const serviceId = "service_k0un4x3";
+    emailjs.send(serviceId, templateId, params)
+      .then(() => {
+        name.value = '';
+        phoneNumber.value = '';
+        email.value = '';
+        message.value = '';
+        showSuccess();
+        setTimeout(() => {
+          navigate('landingPage', 'landing-nav')
+          document.querySelector('#message-success').classList.remove('show');
+        }, 2500);
+      })
+      .catch((e) => console.log('ERROR', e));
+  }
+
   emailjs.init({ publicKey }) 
 })();

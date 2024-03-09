@@ -2,389 +2,196 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Brightside Golden</title>
-<link rel="stylesheet" href="main.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<title>Brightside Goldens</title>
+<link rel="stylesheet" href="main.css"/>
+<link rel="stylesheet" href="accordion.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<link 
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans" 
+>
+<link 
+  rel="stylesheet" 
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" 
+/>
+<link 
+  rel="stylesheet" 
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
 </head>
 <body>
   <div class="header">
-    <h1 id="header-title" tabindex="0">
-      Brightside Golden Retrievers
-    </h1>
-    <p class="tag-line"><i id="tag-line-text">AKC Goldens, Bred to the European Standard!</i></p>
+    <h1 id="header-title"></h1>
+    <p id="tag-line-text"></p>
   </div>
-  <div id="modal">
-    <button class="close-modal" onclick="toggleModal()">x</button>
-    <div id="modal-content"></div>
+  <div id="nav">
+    <button id="landing-nav" class="nav-link selected" onclick="navigate('landingPage', 'landing-nav')">Home</button>
+    <button id="litters-nav" class="nav-link" onclick="navigate('littersPage', 'litters-nav')">Puppies</button>
+    <button id="boys-nav" class="nav-link" onclick="navigate('boysPage', 'boys-nav')">Our Boys</button>
+    <button id="girls-nav" class="nav-link" onclick="navigate('girlsPage', 'girls-nav')">Our Girls</button>
   </div>
-  <div id="home">
-    <div class="home-layout layout">
-      <div class="nav-links">
-        <button onclick="navigate('current-litters')" class="nav-link">Our Litters</button>
-        <button onclick="navigate('studs')" class="nav-link">Our Boys</button>
-        <button onclick="navigate('femails')" class="nav-link">Our Girls</button>
+
+  <!-- LANDING PAGE -->
+
+  <div id="landing-page" class="page show">
+    <div class="content-wrapper">
+      <div class="slide-show-wrapper">
+        <img src="assets/landing-page/landing-page-2.jpg" 
+          alt="cute puppy picture" 
+          class="landing-page-img"
+        >
+        <img src="" alt="cute puppy picture" class="landing-page-img-2 absolute">
       </div>
-      <div class="page-content">
-        <div class="hero-image-container">
-          <div class="slide-show-wrapper">
-            <img src="assets/landing-page/landing-page-2.jpg" 
-              alt="cute puppy picture" 
-              class="landing-page left"
-            >
-            <img src="" alt="" class="landing-page-2 right">
-          </div>
-          </div>
-        </div>
-        <div class="mission-statement">
-          <p>
-            Here at Brightside, our goal is simple but lofty! To raise the “Cream of the Creams”: ideal family members, with a sweet, trainable, therapy type temperament, correct “European standard” conformation, and thorough health and genetic testing to help them live their best life with their forever families!
-          </p>
-          <p>
-            We undertake several different protocols to help our pups become ideal family members. We socialize our pups with our extended family and friends, and practice Early Neurological Stimulation, which has many benefits, among them a more graduated stress response in your adult dog, improved trainability, and a stronger immune system, as well as starting them on potty training, and name recall.
-          </p>
-          <p>
-            Our parents have all their health clearances (hips, elbows, eyes and heart) and genetic testing done for the 11 most common genetic diseases which affect Goldens, so pups are guaranteed clear/unaffected, including for NCL, and both ICT 1 & 2 (the recently discovered, nastier version of ICT in Goldens.)
-          </p>
-          <p>
-            We offer a health guarantee and pups go home throughly vet checked, with first shots and de-worming done.
-          </p>
-          <!-- <div class="dog-links-wrapper">
-            <h2>We have Spring puppies!</h2>
-            <button onclick="navigate('current-litters')" class="nav-link">Meet Our Litters</button>
-            <button onclick="navigate('studs')" class="nav-link">Meet Our Boys</button>
-            <button onclick="navigate('femails')" class="nav-link">Meet Our Girls</button>
-          </div> -->
-        </div>
+      <div class="info-container">
+        <h2>We have Spring puppies!</h2>
+        <p><span class="material-symbols-outlined">pets</span><span>Hand Raised with Love</span></p>
+        <p><span class="material-symbols-outlined">pets</span><span>Champion Sired / Grand Sired</span></p>
+        <p><span class="material-symbols-outlined">pets</span><span>Imported European Bloodlines</span></p>
+        <p><span class="material-symbols-outlined">pets</span><span>All OFA and Genetic Clearances</span></p>
+        <p><span class="material-symbols-outlined">pets</span><span>Neurological Stimulation / Socialization</span></p>
+        <p><span class="material-symbols-outlined">pets</span><span>Health Guarantee</span></p>
+        <p><span class="material-symbols-outlined">pets</span><span>AKC Registered</span></p>
       </div>
     </div>
   </div>
 
-  <div id="current-litters">
-    <div class="current-litters-layout layout">
-      <div class="nav-links">
-        <button onclick="navigate('home')" class="nav-link">Home</button>
-        <button onclick="navigate('studs')" class="nav-link">Our Boys</button>
-        <button onclick="navigate('femails')" class="nav-link">Our Girls</button>
+  <!-- PUPPIES PAGE -->
+
+  <div id="litters-page" class="page">
+    <div class="accordions-container">
+      <div class="accordion">
+        <div class="accordion-info">
+          <h3>Max and Rosie puppies, coming at the end of March</h3>
+          <div class="mid-info mobile">
+            <p>Pups will be ready to go home at the end of May</p>
+            <button class="contact-us-link"  onclick="navigate('contactUsPage', 'contact-us-nav')">
+             <span class="blue">Contact us</span> to be added to our waitlist!
+            </button>
+          </div>
+        </div>
+        <div class="accordion-preview">
+          <div class="parents">
+            <div class="mama">
+              <div class="slide-show-wrapper">
+                <img src="assets/rosie/rosie-1.jpg" 
+                  alt="cute puppy picture" 
+                  class="rosie"
+                >
+                <img src="" alt="cute puppy picture" class="rosie-2 absolute">
+                <button onclick="slideShow('rosie', 3000, 2)">Start Slide Show</button>
+              </div>
+            </div>
+            <div class="mid-info">
+              <p>Pups will be ready to go home at the end of May</p>
+              <button class="contact-us-link"  onclick="navigate('contactUsPage', 'contact-us-nav')">
+               <span class="blue">Contact us</span> to be added to our waitlist!
+              </button>
+            </div>
+            <div class="sire">
+              <div class="slide-show-wrapper">
+                <img src="assets/max/max-1.jpg" 
+                  alt="cute puppy picture" 
+                  class="max"
+                >
+                <img src="" alt="cute puppy picture" class="max-2 absolute">
+                <button onclick="slideShow('max', 3000, 2)">Start Slide Show</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-full-content"> </div>
       </div>
-      <div class="scrollable-content born">
-        <div class="accordion">
-          <h2 class="status">Upcoming Litters</h2>
-          <div class="accordion-item">
-            <div class="closed-accordion-wrapper closed" onclick="expand(this)">
-              <p>Buddy and Lexi, coming mid March</p>
-              <span class="material-symbols-outlined">expand_more</span>
-            </div>
-            <div class="scrollable-content closed">
-              <div class="litter-header">
-                <h2 class="status">Hookin' up soon!!</h2>
-                <p class="planned-arrival-date">These two should have a litter on the ground by early Summer</p>
-              </div>
-              <div class="border-line"></div>
-              <div class="parents-wrapper">
-                <div class="parent">
-                  <p class="parent-name tablet">Meet Mom: Momo</p>
-                  <p class="parent-fancy-name tablet">Officially known as Chameaux</p>
-                  <img src="assets/momo.PNG" alt="">
-                  <div class="info-wrapper">
-                    <p class="parent-name desktop">Meet Mom: Momo</p>
-                    <p class="parent-fancy-name desktop">Officially known as Chameaux</p>
-                    <div class="description">Momo is kinda Stupid, like her mom, but super sweet and she has a chameaux-hawk, which is actually kinda bad-ass.</div>
-                  </div>
-                  <div class="slide-show"></div>
-                </div>
-  
-                <div class="parent">
-                  <div class="border-line"></div>
-                  <p class="parent-name tablet">Meet Dad: Buddy</p>
-                  <p class="parent-fancy-name tablet">Also known as "Lord Buddy of Chutney"</p>
-                  <img src="assets/buddy.PNG" alt="">
-                  <div class="info-wrapper">
-                    <p class="parent-name desktop">Meet Dad: Buddy</p>
-                    <p class="parent-fancy-name desktop">Also known as "Lord Buddy of Chutney"</p>
-                    <div class="description">He's a lover not a fighter, definately not a fighter</div>
-                  </div>
-                  <div class="border-line bottom"></div>
-                </div>
+      <div class="accordion">
+        <div class="accordion-info" onclick="expand(this)">
+          <h3>Buddy and Bailey puppies, coming at the end of March</h3>
+          <!-- <span class="material-symbols-outlined">expand_more</span> -->
+        </div>
+        <div class="accordion-preview">
+          <div class="parents">
+            <div class="mama">
+              <div class="slide-show-wrapper">
+                <img src="assets/bailey/bailey-1.jpg" 
+                  alt="cute puppy picture" 
+                  class="bailey"
+                >
+                <img src="" alt="cute puppy picture" class="bailey-2 absolute">
+                <button onclick="slideShow('bailey', 3000, 2)">Start Slide Show</button>
               </div>
             </div>
-          </div>
-  
-          <div class="accordion-item">
-            <div class="closed-accordion-wrapper closed" onclick="expand(this)">
-              <p>Max and Rosie, Coming in May</p>
-              <span class="material-symbols-outlined">expand_more</span>
+            <div class="mid-info">
+              <p>Pups will be ready to go home at the end of May</p>
+              <button class="contact-us-link"  onclick="navigate('contactUsPage', 'contact-us-nav')">
+                <span class="blue">Contact us</span> to be added to our waitlist!
+               </button>
             </div>
-            <div class="scrollable-content closed">
-              <div class="litter-header">
-                <h2 class="status">Mamma's been knocked-up</h2>
-                <p class="expecting-arrival-date">We are expecting them in early March.</p>
-                <p class="expecting-ready-date">They should be ready to go home at the end of April</p>
-              </div>
-              <div class="border-line"></div>
-              <div class="parents-wrapper">
-                <div class="parent">
-                  <p class="parent-name tablet">Meet Mom: Momo</p>
-                  <p class="parent-fancy-name tablet">Officially known as Chameaux</p>
-                  <img src="assets/momo.PNG" alt="">
-                  <div class="info-wrapper">
-                    <p class="parent-name desktop">Meet Mom: Momo</p>
-                    <p class="parent-fancy-name desktop">Officially known as Chameaux</p>
-                    <div class="description">Momo is kinda Stupid, like her mom, but super sweet and she has a chameaux-hawk, which is actually kinda bad-ass.</div>
-                  </div>
-                  <div class="slide-show"></div>
-                </div>
-  
-                <div class="parent">
-                  <div class="border-line"></div>
-                  <p class="parent-name tablet">Meet Dad: Buddy</p>
-                  <p class="parent-fancy-name tablet">Also known as "Lord Buddy of Chutney"</p>
-                  <img src="assets/buddy.PNG" alt="">
-                  <div class="info-wrapper">
-                    <p class="parent-name desktop">Meet Dad: Buddy</p>
-                    <p class="parent-fancy-name desktop">Also known as "Lord Buddy of Chutney"</p>
-                    <div class="description">He's a lover not a fighter, definately not a fighter</div>
-                  </div>
-                  <div class="border-line bottom"></div>
-                </div>
+            <div class="sire">
+              <div class="slide-show-wrapper">
+                <img src="assets/buddy/buddy-1.jpg" 
+                  alt="cute puppy picture" 
+                  class="buddy"
+                >
+                <img src="" alt="cute puppy picture" class="buddy-2 absolute">
+                <button onclick="slideShow('buddy', 3000, 2)">Start Slide Show</button>
               </div>
             </div>
           </div>
         </div>
-  
-        <div class="border-line bottom always-display"></div>
-
-        <div class="litter-header">
-          <h2 class="status">Our Current Litter</h2>
-          <p class="status">Come Meet Them Today!!</p>
-          <p class="arrival-date">Born: January 3, 2024</p>
-          <p class="ready-date">Ready to go Home: February 29, 2024</p>
-        </div>
-        <div class="border-line"></div>
-        <div class="parents-wrapper">
-          <div class="parent">
-            <p class="parent-name tablet">Meet Mom: Momo</p>
-            <p class="parent-fancy-name tablet">Officially known as Chameaux</p>
-            <img src="assets/momo.PNG" alt="">
-            <div class="info-wrapper">
-              <p class="parent-name desktop">Meet Mom: Momo</p>
-              <p class="parent-fancy-name desktop">Officially known as Chameaux</p>
-              <div class="description">Momo is kinda Stupid, like her mom, but super sweet and she has a chameaux-hawk, which is actually kinda bad-ass.</div>
-            </div>
-            <div class="slide-show"></div>
-          </div>
-
-          <div class="parent">
-            <div class="border-line"></div>
-            <p class="parent-name tablet">Meet Dad: Buddy</p>
-            <p class="parent-fancy-name tablet">Also known as "Lord Buddy of Chutney"</p>
-            <img src="assets/buddy.PNG" alt="">
-            <div class="info-wrapper">
-              <p class="parent-name desktop">Meet Dad: Buddy</p>
-              <p class="parent-fancy-name desktop">Also known as "Lord Buddy of Chutney"</p>
-              <div class="description">He's a lover not a fighter, definately not a fighter</div>
-            </div>
-            <div class="border-line bottom"></div>
-          </div>
-        </div>
-        <div class="scrollable-content">
-          <p class="puppies-intro">Meet their puppies</p>
-          <div class="puppies-container">
-            <div class="litter-puppy">
-              <div class="slide-show-wrapper">
-                <img src="assets/adorbs.jpg" alt="" class="thor left">
-                <img src="" alt="" class="thor-2 right">
-              </div>
-              <button class="slide-show" onclick="slideShow('thor')">Slide Show</button>
-              <p class="nick-name">Thor</p>
-              <div class="description">He will bring the hammer down... or snug.</div>
-            </div>
-            <div class="litter-puppy">
-              <div class="slide-show-wrapper">
-                <img src="assets/flower-puppies-sleeping.PNG" alt="" class="cap left">
-                <img src="" alt="" class="cap-2 right">
-              </div>
-              <button class="slide-show" onclick="slideShow('cap')">Slide Show</button>
-              <p class="nick-name">Cap</p>
-              <div class="description">I can do this all day... if you cuddle me.</div>
-            </div>
-            <div class="litter-puppy">
-              <div class="slide-show-wrapper">
-                <img src="assets/pumpkin-puppy.jpg" alt="" class="heavy-d left">
-                <img src="" alt="" class="heavy-d-2 right">
-              </div>
-              <button class="slide-show" onclick="slideShow('heavy-d')">Slide Show</button>
-              <p class="nick-name">Heavy D</p>
-              <div class="description">Everything is a squirrel, SQUIRREL!</div>
-            </div>
-            <div class="litter-puppy">
-              <div class="slide-show-wrapper">
-                <img src="assets/puppy-under-chair.jpg" alt="" class="hulk left">
-                <img src="" alt="" class="hulk-2 right">
-              </div>
-              <button class="slide-show" onclick="slideShow('hulk')">Slide Show</button>
-              <p class="nick-name">Hulk</p>
-              <div class="description">Hull Snug!</div>
-            </div>
-            <div class="litter-puppy">
-              <div class="slide-show-wrapper">
-                <img src="assets/adorbs.jpg" alt="" class="rocket left">
-                <img src="" alt="" class="rocket-2 right">
-              </div>
-              <button class="slide-show" onclick="slideShow('rocket')">Slide Show</button>
-              <p class="nick-name">Rocket</p>
-              <div class="description">I always wanted to invent a bigger hug</div>
-            </div>
-            <div class="litter-puppy">
-              <div class="slide-show-wrapper">
-                <img src="assets/flower-puppies-sleeping.PNG" alt="" class="star-lord left">
-                <img src="" alt="" class="star-lord-2 right">
-              </div>
-              <button class="slide-show" onclick="slideShow('star-lord')">Slide Show</button>
-              <p class="nick-name">Star Lord</p>
-              <div class="description">Did somebody say snuggles? I'm your pup!</div>
-            </div>
-            <div class="litter-puppy">
-              <div class="slide-show-wrapper">
-                <img src="assets/pumpkin-puppy.jpg" alt="" class="spidey left">
-                <img src="" alt="" class="spidey-2 right">
-              </div>
-              <button class="slide-show" onclick="slideShow('spidey')">Slide Show</button>
-              <p class="nick-name">Spidey</p>
-              <div class="description">I will be yours forever</div>
-            </div>
-            <div class="litter-puppy">
-              <div class="slide-show-wrapper">
-                <img src="assets/puppy-under-chair.jpg" alt="" class="gamora left">
-                <img src="" alt="" class="gamora-2 right">
-              </div>
-              <button class="slide-show" onclick="slideShow('gamora')">Slide Show</button>
-              <p class="nick-name">Gamora</p>
-              <div class="description">I'm just want to be part of your family!</div>
-            </div>
-            <div class="litter-puppy">
-              <div class="slide-show-wrapper">
-                <img src="assets/adorbs.jpg" alt="" class="tony left">
-                <img src="" alt="" class="tony-2 right">
-              </div>
-              <button class="slide-show" onclick="slideShow('tony')">Slide Show</button>
-              <p class="nick-name">Tony</p>
-              <div class="description">I want to be cuddled 3000</div>
-            </div>
-            <div class="litter-puppy">
-              <div class="slide-show-wrapper">
-                <img src="assets/flower-puppies-sleeping.PNG" alt="" class="loki left">
-                <img src="" alt="" class="loki-2 right">
-              </div>
-              <button class="slide-show" onclick="slideShow('loki')">Slide Show</button>
-              <p class="nick-name"></p>
-              <div class="description">Working hard to by the dog of mischief</div>
-            </div>
-            <div class="litter-puppy">
-              <div class="slide-show-wrapper">
-                <img src="assets/pumpkin-puppy.jpg" alt="" class="samuel left">
-                <img src="" alt="" class="samuel-2 right">
-              </div>
-              <button class="slide-show" onclick="slideShow('samuel')">Slide Show</button>
-              <p class="nick-name">Samuel</p>
-              <div class="description">One thing's for sure, I need a hug.</div>
-            </div>
-            <div class="litter-puppy">
-              <div class="slide-show-wrapper">
-                <img src="assets/puppy-under-chair.jpg" alt="" class="taco left">
-                <img src="" alt="" class="taco-2 right">
-              </div>
-              <button class="slide-show" onclick="slideShow('taco')">Slide Show</button>
-              <p class="nick-name">taco</p>
-              <div class="description">Where did I come from?</div>
-            </div>
-          </div>
-        </div>
+        <div class="accordion-full-content"></div>
       </div>
     </div>
   </div>
 
-  <div id="studs">
-    <div class="studs-layout layout">
-      <div class="nav-links">
-        <button onclick="navigate('home')" class="nav-link">Home</button>
-        <button onclick="navigate('current-litters')" class="nav-link">Our Litters</button>
-        <button onclick="navigate('femails')" class="nav-link">Our Girls</button>
-      </div>
-      <div class="scrollable-content">
-        <div class="litter-header">
-          <h2 class="status">Our Stud Dogs</h2>
-        </div>
-        <div class="border-line"></div>
-        <div class="parents-wrapper">
-          <div class="parent">
-            <p class="parent-name tablet">Max</p>
-            <p class="parent-fancy-name tablet">Officially known as <b>Brightside’s Battle Born</b></p>
-            <div class="slide-show-wrapper">
-              <img src="assets/max/max-1.jpg" alt="" class="max left">
-              <img src="" alt="" class="max-2 right">
-              <button class="slide-show" onclick="slideShow('max')">Slide Show</button>
-            </div>
-            <div class="info-wrapper">
-              <p class="parent-name desktop">Max</p>
-              <p class="parent-fancy-name desktop">Officially known as <b>Brightside’s Battle Born</b></p>
-              <p class="registration-number">ABCD-1234</p>
-              <div class="description">The ladies are definately fans.</div>
-              <div class="clearances">
-                <div>
-                  <p class="clearance-title">OFA Clearances:</p>
-                  <p>Ofa ipusu ad nauseum</p>
-                  <p class="clearance-title">Genetic Clearances</p>
-                  <p>Genetic ipsum and thensum</p>
-                </div>
-              </div>
-            </div>
-            <div class="slide-show"></div>
-          </div>
-          <div class="parent">
-            <div class="border-line"></div>
-            <p class="parent-name tablet">Buddy</p>
-            <p class="parent-fancy-name tablet">Also known as "Lord Buddy of Chutney"</p>
-            <div class="slide-show-wrapper">
-              <img src="assets/buddy.PNG" alt="" class="buddy left">
-              <img src="" alt="" class="buddy-2 right">
-              <button class="slide-show" onclick="slideShow('buddy')">Slide Show</button>
-            </div>
-            <div class="info-wrapper">
-              <p class="parent-name desktop">Buddy</p>
-              <p class="parent-fancy-name desktop">Also known as "Lord Buddy of Chutney"</p>
-              <p class="registration-number">ABCD-4321</p>
-              <div class="description">He's a lover not a fighter, definately a lover</div>
-              <div class="clearances">
-                <div>
-                  <p class="clearance-title">OFA Clearances</p>
-                  <p>Ofa ipusu ad nauseum</p>
-                  <p class="clearance-title">Genetic Clearances</p>
-                  <p>Genetic ipsum and then some</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- BOYS PAGE -->
+
+  <div id="boys-page" class="page">Hello boys</div>
+
+  <!-- GIRLS PAGE -->
+
+  <div id="girls-page" class="page">Hello girls</div>
+
+  <!-- ABOUT US PAGE -->
+
+  <div id="about-us-page" class="page">
+    <p>
+      Here at Brightside, our goal is simple but lofty! To raise the “Cream of the Creams”: English Goldens who will be ideal family members, with a sweet, trainable, therapy type temperament, correct “European standard” conformation, and thorough health and genetic testing to help them live their best life with their forever families!
+    </p>
+    <p>
+      Our Golden journey began in 2015 with our first Goldie, Bruce. We absolutely fell in love with this wonderful breed. It is no wonder they inspire so much loyalty! With their intelligence, loyalty, personality and that special attunement to people…Goldens are just special!
+    </p>
+    <p>
+      It was a good time in our family’s life to allow a lifelong dream of raising dogs in the country to be accomplished, and raising puppies for us is now a total family endeavor.
+      We are there with them from their first breath, to the day we place them in the arms of their forever families.
+    </p>
+    <p>
+      When I visited Europe, and saw the Goldens there, which are slightly blockier, stockier, and often lighter (the European standard allows for a cream colored dog) than the American bred dogs, I decided that was the direction I wanted to go.
+    </p>
+    <p>
+      We have learned a lot along the way and we continue to research! We undertake several different protocols to help our pups become ideal family members. We socialize our pups with our extended family and friends, and practice Early Neurological Stimulation, (which has many benefits: a more graduated stress response in your adult dog, improved trainability, and a stronger immune system), as well as starting them on potty training, and name recall.
+    </p>
+    <p>
+      Our parents have all their health clearances (hips, elbows, eyes and heart) and genetic testing done for the common genetic diseases which affect Goldens, so pups are guaranteed clear/unaffected, including for both ICT 1 & 2, which is the recently discovered, nastier version of ICT in Goldens.
+    </p>
+    <p>We offer a health guarantee and pups go home throughly vet checked, with first shots and de-worming done.</p>
+    <p>
+      We offer ongoing help and support if desired. Many of our puppy families send us updates and we love to hear how happy the pups are in their new families.
+    </p>
+    <p>
+      Price is for Ltd (pet) registration, ask re: full registration, these pups are awesome prospects to found a program on.
+    </p>
+    <p>
+      We are in the Denver, Colorado area but can arrange delivery just about anywhere
+      and have had many pups go out of state, coast to coast, as far as Maine, Florida, California and Hawaii!
+    </p>
   </div>
 
-  <div id="femails">
-    <div class="femails-layout layout">
-      <div class="nav-links">
-        <button onclick="navigate('home')" class="nav-link">Home</button>
-        <button onclick="navigate('current-litters')" class="nav-link">Our Litters</button>
-        <button onclick="navigate('studs')" class="nav-link">Our Boys</button>
-      </div>
-      <div class="scrollable-content"></div>
-    </div>
-  </div>
+  <!-- CONTACT US PAGE -->
 
-  <div id="contact-us-modal" class="hidden">
+  <div id="contact-us-page" class="page">
     <p>Please give us your contact information and we will reach out to you right away</p>
     <input id="contact-name" placeholder="Name" type="text">
     <input id="contact-phone-number" placeholder="Phone Number" type="text">
@@ -392,22 +199,150 @@
     <textarea placeholder="Feel free to leave a message here." id="contact-message" type="text" rows="8" cols="50"></textarea>
 
     <div class="button-wrapper">
-      <button onclick="showContactUsModal()">Cancel</button>
+      <button onclick="navigate('landingPage', 'landing-nav')">Cancel</button>
       <button onclick="sendMessage()">Send</button>
     </div>
+
+    <div id="message-success">
+      <span class="material-symbols-outlined">check_circle</span>
+      <p>Message Sent</p>
+    </div>
   </div>
-  
+
+  <!-- FAQ PAGE -->
+
+  <div id="faq-page" class="page">
+
+    <h2>People after ask...</h2>
+
+    <div class="faq-wrapper">
+      <div class="faq-question-wrapper">
+        <p class="faq-question">
+          <b>What is the difference between an “English Golden” and an “American Golden”?</b>
+        </p>
+        <button class="expand-button" onclick="expandFaq(0)">
+          <span class="material-symbols-outlined">expand_more</span>
+        </button>
+        <button class="collapse-button hidden" onclick="collapseFaq(0)">
+          <span class="material-symbols-outlined">expand_less</span>
+        </button>
+      </div>
+      <div class="faq-answer-wrapper">
+        <p class="faq-answer">
+          All Golden Retrievers were bred from European dogs, because the breed originated in Scotland. As the breed developed in the different countries, variations appeared. The European standard now calls for a stockier, blockier dog, and allows for a lighter coat, called a “cream”, hence the broadly used term “English Cream”. The American bred dogs tend to be leggier, more lightly built, (although there is a lot of variety in type!) and energetic, especially the field bred dogs. The American Standard allows for a “red” dog, which the European standard does not.
+        </p>
+        <p class="faq-answer">
+          The AKC allows cream coated Goldens to be registered as “light Goldens”.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-wrapper">
+      <div class="faq-question-wrapper">
+        <p class="faq-question">
+          “Is there a big difference in temperament between the two types?”
+        </p>
+        <button class="expand-button" onclick="expandFaq(1)">
+          <span class="material-symbols-outlined">expand_more</span>
+        </button>
+        <button class="collapse-button hidden" onclick="collapseFaq(1)">
+          <span class="material-symbols-outlined">expand_less</span>
+        </button>
+      </div>
+      <div class="faq-answer-wrapper">
+        <p class="faq-answer">
+          In my experience, my European or “English” dogs are more settled and trainable than the American Goldens I have met / owned. I have heard the same from other people, including trainers, that they are preferred for service/therapy work for this reason. Just like people though, there can be wide personality differences, even amongst the types!
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-wrapper">
+      <div class="faq-question-wrapper">
+        <p class="faq-question">
+          “Are your puppies good candidates for becoming service or therapy dogs?”
+        </p>
+        
+        <button class="expand-button" onclick="expandFaq(2)">
+          <span class="material-symbols-outlined">expand_more</span>
+        </button>
+        <button class="collapse-button hidden" onclick="collapseFaq(2)">
+          <span class="material-symbols-outlined">expand_less</span>
+        </button>
+      </div>
+      <div class="faq-answer-wrapper">
+        <p class="faq-answer">
+          Yes! If you are looking for a service or therapy dog, please let us know. We have Volhard testing available to aid in your search for the perfect fit.
+        </p>
+      </div>
+    </div>
+
+      <!-- “Aren’t they all just Goldens then?”
+      Yes! -->
+
+    <div class="faq-wrapper">
+      <div class="faq-question-wrapper">
+        <p class="faq-question">
+          “Is there a difference in cancer rates between the European and American dogs?”
+        </p>
+        
+        <button class="expand-button" onclick="expandFaq(3)">
+          <span class="material-symbols-outlined">expand_more</span>
+        </button>
+        <button class="collapse-button hidden" onclick="collapseFaq(3)">
+          <span class="material-symbols-outlined">expand_less</span>
+        </button>
+      </div>
+      <div class="faq-answer-wrapper">
+        <p class="faq-answer">
+          There was a study done which seems to indicate that, but I don’t feel comfortable making that claim myself. We await more conclusive evidence about Goldens and cancer as more information comes out from the lifetime study!
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-wrapper">
+      <div class="faq-question-wrapper">
+        <p class="faq-question">
+          “When do you recommend spaying and neutering”?
+        </p>
+        
+        <button class="expand-button" onclick="expandFaq(4)">
+          <span class="material-symbols-outlined">expand_more</span>
+        </button>
+        <button class="collapse-button hidden" onclick="collapseFaq(4)">
+          <span class="material-symbols-outlined">expand_less</span>
+        </button>
+      </div>
+      <div class="faq-answer-wrapper">
+        <p class="faq-answer">
+          We recommend waiting until at least 12 months for males, and until at least the first heat cycle for girls. The skeletal difference between a dog altered at 6 months and 12 months is staggering, and  hormones play important roles in development of structure, particularly long bone growth and ligaments, etc.
+        </p>
+        <p class="faq-answer">
+          We offer helpful guidelines for feeding, training and general canine well being which we pass along to our puppy families. We love this breed and love to share what we have learned through our years of experience the years and continuing research.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!------------ FOOTER ------------>
+
   <div class="footer">
-    <div class="footer-link">About Us</div>
-    <div class="footer-link">FAQs</div>
-    <div class="footer-link" onclick="showContactUsModal()">Contact Us</div>
+    <button id="about-us-nav" class="footer-link" onclick="navigate('aboutUsPage', 'about-us-nav')">
+      About Us
+    </button>
+    <button id="contact-us-nav" class="footer-link" onclick="navigate('contactUsPage', 'contact-us-nav')">
+      Contact Us
+    </button>
+    <button id="faq-nav" class="footer-link" onclick="navigate('faqPage', 'faq-nav')">
+      FAQs
+    </button>
   </div>
 </body>
 <script 
   type="text/javascript" 
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
 ></script>
-<script src="js/email.js"></script>
-<script src="js/litters.js"></script>
-<script src="js/app.js"></script>
+<script type="text/javascript" src="js/accordion.js"></script>
+<script type="text/javascript" src="js/slide-show.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/email.js"></script>
 </html>

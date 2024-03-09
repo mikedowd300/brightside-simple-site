@@ -1,0 +1,517 @@
+body {
+  background-color: rgba(0, 0, 0, .9);
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.header {
+  background-color: black;
+  padding: 12px 0;
+  color: white;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0 8px 0;
+}
+
+.tag-line {
+  margin: 12px 8px 0;
+  font-size: 18px;
+}
+
+#modal {
+  padding: 16px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 90px;
+  left: 12px;
+  height: calc(100vh - 24px - 90px);
+  width: calc(100% - 36px);
+  display: none;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  flex-direction: column;
+}
+
+.close-modal {
+  padding-left: calc(100% - 18px);
+  border: none;
+  background-color: white;
+  height: 30px;
+  font-size: 24px;
+}
+
+.close-modal:hover {
+  cursor: pointer;
+}
+
+#home {
+  background-color: rgba(255, 255, 255, .1);
+}
+
+.layout {
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  background-color: rgba(255, 255, 255, .1);
+  width: 100%;
+  flex-direction: column;
+}
+
+.current-litters-layout.layout, .studs-layout.layout, .femails-layout.layout {
+  background-color: blanchedalmond;
+}
+
+.accordion {
+  margin: 16px;
+}
+
+.accordion .accordion-item {
+  padding: 16px;
+  margin: 0;
+  border: 1px solid black;
+  background-color: antiquewhite;
+}
+
+.accordion .accordion-item:last-child:not(:first-child) {
+  border-top: none;
+}
+
+.accordion .accordion-item .scrollable-content {
+  transition: height 500ms;
+  min-height: 0;
+  overflow: scroll;
+}
+
+.accordion .accordion-item .scrollable-content.closed {
+  height: 0;
+}
+
+.accordion .accordion-item .scrollable-content.open {
+  height: 420px;
+  min-width: 0;
+}
+
+.accordion .accordion-item .closed-accordion-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.closed-accordion-wrapper p {
+  margin: 0;
+}
+
+.accordion .accordion-item .closed-accordion-wrapper:hover, .closed-accordion-wrapper span:hover {
+  cursor: pointer;
+}
+
+.hero-image-container {
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, .9);
+}
+
+.dog-links-wrapper .background-image {
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mission-statement {
+  background-color: rgba(0, 0, 0, .9);
+  color: white;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 24px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+/* .dog-links-wrapper {
+  border: 2px solid white;
+  padding: 12px;
+  border-radius: 4px;
+  min-width: 315px;
+  position: relative;
+  overflow: hidden;
+  background-image: url("assets/two-cute.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 1px 1px white;
+  background-color: rgba(255, 255, 255, .1);
+} */
+
+.dog-links-wrapper h2 {
+  max-width: 400px;
+  text-decoration: underline;
+  text-shadow: 2px 2px 2px black;
+  border-radius: 6px;
+}
+
+.dog-links-wrapper .nav-link {
+  text-shadow: 2px 2px 2px black;
+  display: block;
+  padding: 6px 0;
+  color: white;
+}
+
+.dog-links-wrapper .nav-link:hover {
+  text-shadow: 2px 2px 2px white;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  background-color: antiquewhite;
+}
+
+.nav-link {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  padding: 12px 24px 8px;
+  color: gray;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.scrollable-content {
+  height: calc(100vh - 53px - 39px - 40px - 36px);
+  overflow: scroll;
+}
+
+.border-line {
+  display: none;
+}
+
+.border-line.always-display {
+  display: block;
+  border-bottom: 1px solid black;
+}
+
+.litter-header {
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.litter-header p {
+  margin: 6px 0;
+}
+
+.litter-header h2 {
+  margin-bottom: 6px;
+}
+
+.parents-wrapper {
+  display: flex;
+}
+
+.parent {
+  width: 50%;
+  padding: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+}
+
+.parent img {
+  width: 50%;
+  max-width: 300px;
+  min-width: 237px;
+  margin-right: 12px;
+  border-radius: 4px;
+}
+
+.info-wrapper {
+  max-width: 350px;
+}
+
+.parent-name.tablet, .parent-fancy-name.tablet {
+  display: none;
+}
+
+.parent .parent-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.parent .parent-fancy-name {
+  margin-bottom: 8px; 
+}
+
+.parent .info-wrapper {
+
+}
+
+.registration-number {
+  
+}
+
+
+/* <div class="parents-wrapper">
+<div class="parent">
+  <p class="parent-name tablet">Max</p>
+  <p class="parent-fancy-name tablet">Officially known as <b>Brightside’s Battle Born</b></p>
+  <div class="info-wrapper">
+    <p class="parent-name desktop">Max</p>
+    <p class="parent-fancy-name desktop">Officially known as <b>Brightside’s Battle Born</b></p>
+    <p class="mama-registration-number">ABCD-1234</p>
+    <div class="description">The ladies are definately fans.</div>
+    <div class="clearances">
+      <div>
+        <p class="clearance-title">OFA Clearances:</p>
+        <p>Ofa ipusu ad nauseum</p>
+        <p class="clearance-title">Genetic Clearances</p>
+        <p>Genetic ipsum and thensum</p>
+      </div>
+    </div> */
+
+.clearance-title {
+  font-weight: 900;
+}
+
+.puppies-intro {
+  margin: 4px 0 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.puppies-container {
+  width: 100%;
+  padding: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.puppies-container .litter-puppy {
+  max-width: 200px;
+  width: 50%;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid gray;
+  padding: 6px;
+  margin: 6px 6px;
+}
+
+.litter-puppy .slide-show-wrapper, 
+.parent .slide-show-wrapper, 
+.hero-image-container .slide-show-wrapper  {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  position:relative;
+}
+
+.litter-puppy img.left, .parent img.left, .hero-image-container img.left {
+  width: 100%;
+  border-radius: 4px;
+  margin-left: 0;
+  opacity: 1;
+  z-index: 2;
+  transition: opacity 500ms;
+}
+
+.litter-puppy img.right, .parent img.right, .hero-image-container img.right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.litter-puppy button.slide-show, .parent button.slide-show  {
+  margin: -18px 0 0 4px;
+  border: none;
+  padding: none;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.litter-puppy button.slide-show:hover, .parent button.slide-show:hover {
+  cursor: pointer;
+}
+
+.footer {
+  background-color: black;
+  padding: 12px 12px 36px 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-link {
+  color: white;
+  font-size: 18px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.footer-link:hover {
+  cursor: pointer;
+}
+
+#current-litters, #studs, #femails {
+  display: none;
+  max-width: 950px;
+  margin: auto;
+}
+
+#contact-us-modal {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid black;
+  color: black;
+  width: 300px;
+  z-index: 1111;
+}
+
+#contact-us-modal input,  #contact-us-modal textarea {
+  margin-bottom: 12px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+#contact-us-modal.hidden {
+  display: none
+}
+
+#contact-us-modal .button-wrapper {
+  justify-content: right;
+}
+
+.button-wrapper button {
+  padding: 6px;
+  background-color: blue;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid lightskyblue;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 949px) {
+  .parents-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .border-line {
+    display: block;
+    margin: 0 16px;
+    border-bottom: 1px solid black;
+  }
+
+  .border-line.bottom {
+    margin-top: 16px;
+  }
+
+  .parent {
+    width: 100%;
+    justify-content: center;
+  } 
+
+  .puppies-container {
+    padding: 0;
+    padding-top: 12px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .layout {
+    flex-direction: column-reverse;
+  }
+
+  .hero-image-container .slide-show-wrapper {
+    margin-top: 16px;
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .hero-image-container {
+    width: 100%;
+    padding-top: 16px;
+  }
+
+  .mission-statement {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-link {
+    margin-bottom: 12px;
+    margin-top: 12px;
+  }
+
+  .scrollable-content {
+    min-height: calc(100vh - 53px - 39px - 40px - 66px);
+    height: auto;
+    overflow-x: visible;
+    overflow-y: hidden;
+  }
+}
+  
+@media screen and (max-width: 499px) {
+  .parent {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .parent img {
+    width: 100%;
+    max-width: 499px;
+    margin: auto;
+    border-radius: 4px;
+  }
+
+  .info-wrapper {
+    font-size: 20px;
+  } 
+
+  .parent-name.tablet, .parent-fancy-name.tablet {
+    display: inline-block;
+    margin-bottom: 8px;
+  } 
+
+  .parent-name.desktop, .parent-fancy-name.desktop {
+    display: none;
+    margin-bottom: 0;
+  }
+}
+  
+@media screen and (max-width: 451px) {
+  .puppies-container .litter-puppy {
+    max-width: 400px;
+    width: 90%;
+  }
+}
