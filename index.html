@@ -12,30 +12,53 @@
 </head>
 <body>
   <div class="header">
-    <h1 id="header-title">
-      Some awesome cool title goes here!
+    <h1 id="header-title" tabindex="0">
+      Brightside Golden Retrievers
     </h1>
-    <p class="tag-line"><i id="tag-line-text">maybe a tagline goes here</i></p>
+    <p class="tag-line"><i id="tag-line-text">AKC Goldens, Bred to the European Standard!</i></p>
   </div>
   <div id="modal">
     <button class="close-modal" onclick="toggleModal()">x</button>
     <div id="modal-content"></div>
   </div>
   <div id="home">
-    <div class="layout">
-      <div class="mission-statement">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <div class="dog-links-wrapper">
-          <h2>We have Spring puppies!</h2>
-          <button onclick="navigate('current-litters')" class="nav-link">Meet Our Litters</button>
-          <button onclick="navigate('studs')" class="nav-link">Meet Our Boys</button>
-          <button onclick="navigate('femails')" class="nav-link">Meet Our Girls</button>
-        </div>
+    <div class="home-layout layout">
+      <div class="nav-links">
+        <button onclick="navigate('current-litters')" class="nav-link">Our Litters</button>
+        <button onclick="navigate('studs')" class="nav-link">Our Boys</button>
+        <button onclick="navigate('femails')" class="nav-link">Our Girls</button>
       </div>
-      <div class="hero-image-container">
-        <img src="assets/fireside-puppies.jpg" alt="fireside puppies">
+      <div class="page-content">
+        <div class="hero-image-container">
+          <div class="slide-show-wrapper">
+            <img src="assets/landing-page/landing-page-2.jpg" 
+              alt="cute puppy picture" 
+              class="landing-page left"
+            >
+            <img src="" alt="" class="landing-page-2 right">
+          </div>
+          </div>
+        </div>
+        <div class="mission-statement">
+          <p>
+            Here at Brightside, our goal is simple but lofty! To raise the “Cream of the Creams”: ideal family members, with a sweet, trainable, therapy type temperament, correct “European standard” conformation, and thorough health and genetic testing to help them live their best life with their forever families!
+          </p>
+          <p>
+            We undertake several different protocols to help our pups become ideal family members. We socialize our pups with our extended family and friends, and practice Early Neurological Stimulation, which has many benefits, among them a more graduated stress response in your adult dog, improved trainability, and a stronger immune system, as well as starting them on potty training, and name recall.
+          </p>
+          <p>
+            Our parents have all their health clearances (hips, elbows, eyes and heart) and genetic testing done for the 11 most common genetic diseases which affect Goldens, so pups are guaranteed clear/unaffected, including for NCL, and both ICT 1 & 2 (the recently discovered, nastier version of ICT in Goldens.)
+          </p>
+          <p>
+            We offer a health guarantee and pups go home throughly vet checked, with first shots and de-worming done.
+          </p>
+          <!-- <div class="dog-links-wrapper">
+            <h2>We have Spring puppies!</h2>
+            <button onclick="navigate('current-litters')" class="nav-link">Meet Our Litters</button>
+            <button onclick="navigate('studs')" class="nav-link">Meet Our Boys</button>
+            <button onclick="navigate('femails')" class="nav-link">Meet Our Girls</button>
+          </div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -299,16 +322,16 @@
         <div class="parents-wrapper">
           <div class="parent">
             <p class="parent-name tablet">Max</p>
-            <p class="parent-fancy-name tablet">Officially known as Maximus Destroyer of worlds</p>
+            <p class="parent-fancy-name tablet">Officially known as <b>Brightside’s Battle Born</b></p>
             <div class="slide-show-wrapper">
-              <img src="assets/momo.PNG" alt="" class="max left">
+              <img src="assets/max/max-1.jpg" alt="" class="max left">
               <img src="" alt="" class="max-2 right">
               <button class="slide-show" onclick="slideShow('max')">Slide Show</button>
             </div>
             <div class="info-wrapper">
               <p class="parent-name desktop">Max</p>
-              <p class="parent-fancy-name desktop">Officially known as Maximus Destroyer of worlds</p>
-              <p class="mama-registration-number">ABCD-1234</p>
+              <p class="parent-fancy-name desktop">Officially known as <b>Brightside’s Battle Born</b></p>
+              <p class="registration-number">ABCD-1234</p>
               <div class="description">The ladies are definately fans.</div>
               <div class="clearances">
                 <div>
@@ -333,7 +356,7 @@
             <div class="info-wrapper">
               <p class="parent-name desktop">Buddy</p>
               <p class="parent-fancy-name desktop">Also known as "Lord Buddy of Chutney"</p>
-              <p class="sire-registration-number">ABCD-4321</p>
+              <p class="registration-number">ABCD-4321</p>
               <div class="description">He's a lover not a fighter, definately a lover</div>
               <div class="clearances">
                 <div>

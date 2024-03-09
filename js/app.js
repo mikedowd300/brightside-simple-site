@@ -11,6 +11,53 @@ const toggleModal = contentId => {
   modalContent.innerHTML = modalContentMap[contentId];
 }
 
+const aboutUs = [
+  'Here at Brightside, our goal is simple but lofty! To raise the “Cream of the Creams”: ideal family members, with a sweet, trainable, therapy type temperament, correct “European standard” conformation, and thorough health and genetic testing to help them live their best life with their forever families!',
+
+  'We undertake several different protocols to help our pups become ideal family members. We socialize our pups with our extended family and friends, and practice Early Neurological Stimulation, which has many benefits, among them a more graduated stress response in your adult dog, improved trainability, and a stronger immune system, as well as starting them on potty training, and name recall.',
+
+  'Our parents have all their health clearances (hips, elbows, eyes and heart) and genetic testing done for the 11 most common genetic diseases which affect Goldens, so pups are guaranteed clear/unaffected, including for NCL, and both ICT 1 & 2 (the recently discovered, nastier version of ICT in Goldens.)',
+
+  'We offer a health guarantee and pups go home throughly vet checked, with first shots and de-worming done.'
+];
+
+const rosieInfo = {
+  nickName: 'Rosie',
+  fullName: "Brightside’s A Sterling Moon Rose",
+  akc: 'AKC#: SS30529306',
+  hips: 'OFA hip: EXCELLENT',
+  elbows: 'OFA elbow: NORMAL',
+  heart: 'OFA heart (Practitioner) NORMAL',
+  eyes: 'OFA eye (Opthomologist) NORMAL',
+  geneticPanel: 'Genetic Panel: PRCD, PRA 1&2, DM, MD, NCL, ICT 1&2, RD, OI, CMS, DEB: ALL CLEAR',
+  decsription: 'Rosie is our sweet home grown girl. She is the daughter of our foundation English female, sired by our imported European Champion. She passes along their awesome genetics, excellent structure, and the sweetest smile, that she is rarely without.'
+};
+
+const maxInfo = {
+  nickName: 'Max',
+  fullName: "Brightside’s Battle Born",
+  akc: 'AKC#: SS32630201',
+  hips: 'OFA hip: GOOD',
+  elbows: 'OFA elbow: NORMAL',
+  heart: 'OFA heart (cardiologist) NORMAL',
+  eyes: 'OFA eye (ophthalmologist) NORMAL',
+  geneticPanel: 'Genetic Panel: PRCD, PRA 1&2, DM, MD, NCL, ICT 1&2, RD, OI, CMS, DEB: ALL CLEAR',
+  decsription: 'Max is our young up and coming male. He comes from recently imported European lines, 2 grandparents and 6 of 8 great grandparents are European champions. We are excited about all he brings: excellent health, a sweet nature, beautiful European type, and of course, that signature goofy Golden grin.'
+};
+
+const buddyInfo = {
+  nickName: 'Buddy',
+  fullName: 'Apollon of Golden Duck',
+  championTitle: "Imported Champion of Serbia",
+  akc: 'AKC#: SS06748101',
+  hips: 'HIPS: FCI A/A',
+  elbows: 'ELBOWS: FCI 0/0',
+  heart: 'Heart: (Cardiologist) Normal',
+  eyes: 'Eyes: (Opthomologist) Normal',
+  geneticPanel: 'Genetic Panel: PRCD, PRA 1&2, DM, MD, NCL, ICT 1&2, RD, OI, CMS, DEB: ALL CLEAR',
+  decsription: 'Buddy is our gorgeous imported European Champion male, 3 of his 4 grandparents are champions of multiple countries and pups are super typey: blocky, and fluffy. He also passes along a calm, trainable demeanor and his funny, sweet personality. He loves to give hugs.'
+};
+
 const modalContentMap = {
   puppy: 'Puppy Ipsum et puppy fecis...',
   other: 'Bruce ipsim, OG ipsum ...'
@@ -31,20 +78,11 @@ const tagLineTextMap = {
 }
 
 const slideShowMap = {
-  'thor': ['adorbs.jpg', 'flower-puppies-sleeping.PNG', 'two-cute.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
-  'cap': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
-  'heavy-d': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
-  'hulk': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
-  'rocket': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
-  'star-lord': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
-  'spidey': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
-  'gamora': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
-  'loki': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
-  'samuel': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
-  'taco': ['flower-puppies-sleeping.PNG', 'two-cute.jpg', 'adorbs.jpg', 'nilla.PNG', 'buddy.PNG', 'pumpkin-puppy.jpg'],
-  'max': ['momo.PNG', 'momo-2.PNG', 'nilla.PNG', 'nilla-2.PNG'],
-  'buddy': ['buddy.PNG', 'buddy-show.PNG', 'buddy-snow.JPG'],
-  'landing-page': ['fireside-puppies.jpg', 'two-cute.jpg', 'puppy-on-cushion.JPG', 'adorbs.jpg']
+  'buddy': ['buddy/buddy-1.jpg', 'buddy/buddy-2.jpg', 'buddy/buddy-3.jpg', 'buddy/buddy-4.jpg', 'buddy/buddy-4.jpg'],
+  'max': ['max/max-1.jpg', 'max/max-2.jpg', 'max/max-3.jpg', 'max/max-4.jpg', 'max/max-5.jpg'],
+  'rosie': ['rosie/rosie-1.jpg', 'rosie/rosie-2.jpg', 'rosie/rosie-3.jpg', 'rosie/rosie-4.jpg', 'rosie/rosie-5.jpg'],
+  'bailey': ['bailey/bailey-1.jpg', 'bailey/bailey-2.jpg'],
+  'landing-page': ['landing-page/landing-page-2.jpg', 'landing-page/landing-page-3.jpg', 'landing-page/landing-page-4.jpg']
 }
 
 let slideShowInterval;
@@ -64,7 +102,7 @@ const navigate = target => {
   window.scrollTo(0, 0);
 }
 
-const slideShow = (target, interval = 4000) => {
+const slideShow = (target, interval = 4000, iterations = 2) => {
   let count = 0;
   if(slideShowInterval) {
     clearInterval(slideShowInterval);
@@ -81,7 +119,6 @@ const slideShow = (target, interval = 4000) => {
     count++;
     elem.style.setProperty('opacity', opacity);
     setTimeout(() => {
-      console.log('timeout');
       if(opacity === 0) {
         elem.setAttribute('src', `${file}/${slides[0]}`);
       } else if(opacity === 1) {
@@ -89,22 +126,19 @@ const slideShow = (target, interval = 4000) => {
       }
       slides.unshift(slides.pop());
     }, interval / 2);
-    if(count === slides.length * 2) {
+    if(count === slides.length * iterations) {
       clearInterval(slideShowInterval);
       count = 0;
     }
   }, interval);
 }
 
+slideShow('landing-page', 3000, 10);
+
 expand = (elem) => {
   const parent = elem.parentElement;
   const icon = elem.getElementsByClassName('material-symbols-outlined')[0]
   const content = parent.getElementsByClassName('scrollable-content')[0]
-  console.log(elem);
-  console.log(parent);
-  console.log(content);
-  console.log([...parent.classList]);
-  console.log([...content.classList]);
   if([...content.classList].includes('open')) {
     content.classList.remove('open');
     content.classList.add('closed');

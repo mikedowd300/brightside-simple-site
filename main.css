@@ -1,5 +1,5 @@
 body {
-  background-color: blanchedalmond;
+  background-color: rgba(0, 0, 0, .9);
   position: relative;
   padding: 0;
   margin: 0;
@@ -13,8 +13,13 @@ body {
   text-align: center;
 }
 
-.header h1, .header .tag-line {
-  margin: 0;
+.header h1 {
+  margin: 0 8px 0;
+}
+
+.tag-line {
+  margin: 12px 8px 0;
+  font-size: 18px;
 }
 
 #modal {
@@ -44,17 +49,22 @@ body {
   cursor: pointer;
 }
 
+#home {
+  background-color: rgba(255, 255, 255, .1);
+}
+
 .layout {
   max-width: 100%;
-  overflow: none;
+  overflow: hidden;
   box-sizing: border-box;
   display: flex;
+  background-color: rgba(255, 255, 255, .1);
+  width: 100%;
+  flex-direction: column;
 }
 
 .current-litters-layout.layout, .studs-layout.layout, .femails-layout.layout {
   background-color: blanchedalmond;
-  width: 100%;
-  flex-direction: column;
 }
 
 .accordion {
@@ -88,7 +98,6 @@ body {
 }
 
 .accordion .accordion-item .closed-accordion-wrapper {
-  /* transition: height 100ms; */
   display: flex;
   justify-content: space-between;
 }
@@ -97,18 +106,13 @@ body {
   margin: 0;
 }
 
-/* .closed-accordion-wrapper button {
-  border: none;
-  background-color: transparent;
-} */
-
 .accordion .accordion-item .closed-accordion-wrapper:hover, .closed-accordion-wrapper span:hover {
   cursor: pointer;
 }
 
 .hero-image-container {
   width: 50%;
-  overflow: none;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -133,7 +137,7 @@ body {
   line-height: 24px;
 }
 
-.dog-links-wrapper {
+/* .dog-links-wrapper {
   border: 2px solid white;
   padding: 12px;
   border-radius: 4px;
@@ -146,7 +150,7 @@ body {
   color: white;
   text-shadow: 1px 1px white;
   background-color: rgba(255, 255, 255, .1);
-}
+} */
 
 .dog-links-wrapper h2 {
   max-width: 400px;
@@ -243,6 +247,42 @@ body {
   display: none;
 }
 
+.parent .parent-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.parent .parent-fancy-name {
+  margin-bottom: 8px; 
+}
+
+.parent .info-wrapper {
+
+}
+
+.registration-number {
+  
+}
+
+
+/* <div class="parents-wrapper">
+<div class="parent">
+  <p class="parent-name tablet">Max</p>
+  <p class="parent-fancy-name tablet">Officially known as <b>Brightside’s Battle Born</b></p>
+  <div class="info-wrapper">
+    <p class="parent-name desktop">Max</p>
+    <p class="parent-fancy-name desktop">Officially known as <b>Brightside’s Battle Born</b></p>
+    <p class="mama-registration-number">ABCD-1234</p>
+    <div class="description">The ladies are definately fans.</div>
+    <div class="clearances">
+      <div>
+        <p class="clearance-title">OFA Clearances:</p>
+        <p>Ofa ipusu ad nauseum</p>
+        <p class="clearance-title">Genetic Clearances</p>
+        <p>Genetic ipsum and thensum</p>
+      </div>
+    </div> */
+
 .clearance-title {
   font-weight: 900;
 }
@@ -273,14 +313,16 @@ body {
   margin: 6px 6px;
 }
 
-.litter-puppy .slide-show-wrapper, .parent .slide-show-wrapper {
+.litter-puppy .slide-show-wrapper, 
+.parent .slide-show-wrapper, 
+.hero-image-container .slide-show-wrapper  {
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
   position:relative;
 }
 
-.litter-puppy img.left, .parent img.left {
+.litter-puppy img.left, .parent img.left, .hero-image-container img.left {
   width: 100%;
   border-radius: 4px;
   margin-left: 0;
@@ -289,7 +331,7 @@ body {
   transition: opacity 500ms;
 }
 
-.litter-puppy img.right, .parent img.right {
+.litter-puppy img.right, .parent img.right, .hero-image-container img.right {
   position: absolute;
   top: 0;
   left: 0;
@@ -346,6 +388,7 @@ body {
   border: 1px solid black;
   color: black;
   width: 300px;
+  z-index: 1111;
 }
 
 #contact-us-modal input,  #contact-us-modal textarea {
@@ -403,8 +446,16 @@ body {
     flex-direction: column-reverse;
   }
 
+  .hero-image-container .slide-show-wrapper {
+    margin-top: 16px;
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+  }
+
   .hero-image-container {
     width: 100%;
+    padding-top: 16px;
   }
 
   .mission-statement {
@@ -449,11 +500,12 @@ body {
 
   .parent-name.tablet, .parent-fancy-name.tablet {
     display: inline-block;
-    margin-bottom: 0;
+    margin-bottom: 8px;
   } 
 
   .parent-name.desktop, .parent-fancy-name.desktop {
     display: none;
+    margin-bottom: 0;
   }
 }
   
