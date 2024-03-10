@@ -1,11 +1,9 @@
 body {
   margin: 0;
   background-color: white;
-  /* font-family: "Playfair Display", cursive; */
   font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-
 }
 
 .header, .footer {
@@ -243,10 +241,10 @@ body {
 }
 
 #faq-page .faq-wrapper .faq-answer-wrapper.expanded {
-  max-height: 400px;
+  max-height: 440px;
 }
 
-#faq-page .faq-wrapper .faq-answer-wrapper .faq-answer{
+#faq-page .faq-wrapper .faq-answer-wrapper .faq-answer {
   margin-top: 0;
   margin-left: 8px;
   margin-right: 8px;
@@ -274,6 +272,19 @@ body {
 
 .footer-link.selected {
   text-decoration: underline;
+}
+
+.footer .social-media-icons {
+  display: flex;
+  padding-top: 12px;
+}
+
+.footer .social-media-icons .icon-wrapper {
+  margin-right: 12px;
+}
+
+.footer .social-media-icons .icon-wrapper:hover {
+  cursor: pointer;
 }
   
 @media screen and (max-width: 699px) {
@@ -306,5 +317,15 @@ body {
 @media screen and (max-width: 449px) {
   .page {
     min-height: calc(100vh - 230px);
+  }
+
+  .footer {
+    flex-direction: column;
+    height: 220px;
+    align-items: center;
+  }
+
+  .footer .social-media-icons {
+    padding-top: 0;
   }
 }
