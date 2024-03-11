@@ -73,5 +73,6 @@
 
   initPage({ ...pageConfigs.landingPage });
   slideShow('landing-page-img', 3000, 10);
+  window.scrollTo(0, 0);
 })();
 
