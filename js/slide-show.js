@@ -13,9 +13,10 @@ const slideShow = (target, interval = 4000, iterations = 10) => {
   if(slideShowInterval) {
     clearInterval(slideShowInterval);
   }
+  const slideTarget = target.split('XXX')[0];
   let opacity = 1;
   const file = 'assets'; 
-  const slides = slideShowMap[target];
+  const slides = slideShowMap[slideTarget];
   const elem = document.getElementsByClassName(target)[0];
   const elem2 = document.getElementsByClassName(target + '-2')[0];
   elem2.setAttribute('src', `${file}/${slides[1]}`);
