@@ -6,6 +6,11 @@ body {
   font-style: normal;
 }
 
+.border {
+  margin: 24px 0 16px;
+  border-bottom: 1px solid black;
+}
+
 .header, .footer {
   display: flex;
   flex-direction: column;
@@ -82,7 +87,7 @@ body {
   max-width: 500px;
 }
 
-#boys-page .slide-show-wrapper {
+#boys-page .slide-show-wrapper, #girls-page .slide-show-wrapper {
   width: 100%;
   flex-direction: column;
 }
@@ -96,7 +101,7 @@ body {
   transition: opacity 500ms;
 }
 
-#boys-page .slide-show-wrapper img {
+#boys-page .slide-show-wrapper img, #girls-page .slide-show-wrapper img {
   max-height: unset;
 }
 
@@ -124,52 +129,67 @@ body {
   margin-right: 8px;
 }
 
-#boys-page {
+#boys-page, #girls-page {
   border-top: 1px solid black;
   max-width: 750px;
   margin: 4px auto 32px;
+  flex-direction: column;
 }
 
-#boys-page h2 {
+#boys-page h2, #girls-page h2 {
   color: #427884;
 }
 
-#boys-page .dog-wrapper .dog-title {
+#boys-page .dog-wrapper .dog-title, #girls-page .dog-wrapper .dog-title {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#boys-page .dog-wrapper .dog-title h2, #boys-page .dog-wrapper .dog-title .info-desc {
+#boys-page .dog-wrapper .dog-title h2, 
+#boys-page .dog-wrapper .dog-title .info-desc,
+#girls-page .dog-wrapper .dog-title h2,
+#girls-page .dog-wrapper .dog-title .info-desc {
   margin: 0 0 12px;
 }
 
-#boys-page .slides-info-container {
+#boys-page .slides-info-container, #girls-page .slides-info-container {
   display: flex;
 }
 
-#boys-page .slides-info-container .slide-show-wrapper, #boys-page .slides-info-container .dog-info {
+#boys-page .slides-info-container .slide-show-wrapper, 
+#boys-page .slides-info-container .dog-info,
+#girls-page .slides-info-container .slide-show-wrapper,
+#girls-page .slides-info-container .dog-info {
   width: 50%;
 }
 
-#boys-page .slides-info-container .dog-info {
+#boys-page .slides-info-container .dog-info, 
+#girls-page .slides-info-container .dog-info {
   padding-left: 16px;
 }
 
-#boys-page .slides-info-container .dog-info .info-desc-wrapper {
+#boys-page .slides-info-container .dog-info .info-desc-wrapper, 
+#girls-page .slides-info-container .dog-info .info-desc-wrapper {
   margin-bottom: 12px;
 }
 
-#boys-page .slides-info-container .dog-info .info-desc-wrapper .info-desc-label {
+#boys-page .slides-info-container .dog-info .info-desc-wrapper .info-desc-label, 
+#girls-page .slides-info-container .dog-info .info-desc-wrapper .info-desc-label {
   display: inline;
   color: #427884;
   margin-right: 8px;
   font-size: 18px;
 }
 
-#boys-page .slides-info-container .dog-info .info-desc-wrapper .info-desc {
+#boys-page .slides-info-container .dog-info .info-desc-wrapper .info-desc, 
+#girls-page .slides-info-container .dog-info .info-desc-wrapper .info-desc {
   display: inline;
   font-size: 18px;
+}
+
+#boys-page.show, #girls-page.show {
+  display: flex;
 }
 
 #about-us-page.show {
@@ -366,12 +386,15 @@ body {
     min-height: 400px;
   }
 
-  #boys-page .slides-info-container {
+  #boys-page .slides-info-container, #girls-page  .slides-info-container {
     flex-direction: column;
     align-items: center;
   }
 
-  #boys-page .slides-info-container .slide-show-wrapper, #boys-page .slides-info-container .dog-info {
+  #boys-page .slides-info-container .slide-show-wrapper, 
+  #boys-page .slides-info-container .dog-info,
+  #girls-page .slides-info-container .slide-show-wrapper,
+  #girls-page .slides-info-container .dog-info {
     padding-right: 0;
     width: 100%;
     max-width: 500px;
