@@ -102,14 +102,14 @@
   display: none;
 }
 
-.parents .contact-us-link,  .mid-info.mobile .contact-us-link {
+.parents .contact-us-link,  .mid-info.mobile .contact-us-link, .contact-us-link {
   border: none;
   color: white;
   font-size: 16px;
   background-color: transparent;
 }
 
-.parents .contact-us-link .blue, .mid-info.mobile .contact-us-link .blue {
+.parents .contact-us-link .blue, .mid-info.mobile .contact-us-link .blue, .blue {
   color: blue;
   background-color: rgba(255, 255, 255, .05);
   border-radius: 2px;

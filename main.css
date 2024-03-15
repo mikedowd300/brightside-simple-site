@@ -188,6 +188,15 @@ body {
   font-size: 18px;
 }
 
+.dog-info .contact-us-link {
+  padding-left: 0;
+  font-size: 18px;
+}
+
+.dog-info .contact-us-link:hover {
+  cursor: pointer;
+}
+
 #boys-page.show, #girls-page.show {
   display: flex;
 }
@@ -402,6 +411,10 @@ body {
 
   .footer {
     height: 200px;
+  }
+
+  .info-desc {
+    max-width: 500px;
   }
 }
   
