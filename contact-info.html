@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Brightside Goldens</title>
+  <link rel="stylesheet" href="main.css"/>
+  <link rel="stylesheet" href="accordion.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <link 
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans" 
+  >
+  <link 
+    rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" 
+  />
+  <link 
+    rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+  />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+</head>
+<body>
+  <div class="header information-received">
+    <h1 id="header-title">Brightside Golden Retrievers</h1>
+  </div>
+  <div id="contact-us-page" class="page show">
+    <p>Please give us your contact information and we will reach out to you right away</p>
+    <input id="contact-name" placeholder="Name" type="text">
+    <input id="contact-phone-number" placeholder="Phone Number" type="text">
+    <input id="contact-email" placeholder="Email" type="text">
+    <textarea placeholder="Feel free to leave a message here." id="contact-message" type="text" rows="8" cols="50"></textarea>
+    <div class="button-wrapper">
+      <button onclick="navigate('landingPage', 'landing-nav')">Cancel</button>
+      <button onclick="sendMessage()">Send</button>
+    </div>
+    <div id="message-success">
+      <span class="material-symbols-outlined">check_circle</span>
+      <p>Message Sent</p>
+    </div>
+  </div>
+  <a class="main-page-link" href="index.html">Visit Our Web Site</a>
+</body>
+<script 
+  type="text/javascript" 
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+></script>
+<script type="text/javascript" src="js/accordion.js"></script>
+<script type="text/javascript" src="js/slide-show.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/email.js"></script>
+</html>
