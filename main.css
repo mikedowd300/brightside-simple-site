@@ -20,6 +20,10 @@ body {
   text-align: center;
 }
 
+.header.information-received {
+  padding-bottom: 16px;
+}
+
 #header-title {
   margin: 20px 8px 0;
 }
@@ -77,6 +81,18 @@ body {
   background-color: rgba(0, 0, 0, .1);
 }
 
+.content-wrapper.information-received {
+  padding: 16px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.main-page-link {
+  margin-top: 24px;
+  padding-left: 24px;
+}
+
 .slide-show-wrapper {
   width: 50%;
   overflow: hidden;
@@ -127,6 +143,10 @@ body {
 #landing-page .content-wrapper .info-container span {
   font-size: 16px;
   margin-right: 8px;
+}
+
+.info-container h2 {
+  margin: 16px 0;
 }
 
 #boys-page, #girls-page {
