@@ -3,12 +3,13 @@ const slideShowMap = {
   'max': ['max/max-1.jpg', 'max/max-2.jpg', 'max/max-3.jpg', 'max/max-4.jpg', 'max/max-5.jpg'],
   'rosie': ['rosie/rosie-1.jpg', 'rosie/rosie-2.jpg', 'rosie/rosie-3.jpg', 'rosie/rosie-4.jpg', 'rosie/rosie-5.jpg', 'rosie/rosie-6.jpg'],
   'bailey': ['bailey/bailey-1.jpg', 'bailey/bailey-2.jpg'],
-  'landing-page-img': ['landing-page/landing-page-2.jpg', 'landing-page/landing-page-3.jpg', 'landing-page/landing-page-4.jpg', 'landing-page/landing-page-6.jpg']
+  'landing-page-img': ['landing-page/landing-page-2.jpg', 'landing-page/landing-page-3.jpg', 'landing-page/landing-page-4.jpg', 'landing-page/landing-page-6.jpg'],
+  'nilla': ['nilla/nilla-1.jpg', 'nilla/nilla-2.jpg', 'nilla/nilla-3.jpg', 'nilla/nilla-4.jpg', 'nilla/nilla-4.jpg'],
 }
 
 let slideShowInterval;
 
-const slideShow = (target, interval = 4000, iterations = 10) => {
+const slideShow = (target, interval = 4000, iterations = 10, elemTarget = 0) => {
   let count = 0;
   if(slideShowInterval) {
     clearInterval(slideShowInterval);
@@ -17,8 +18,9 @@ const slideShow = (target, interval = 4000, iterations = 10) => {
   let opacity = 1;
   const file = 'assets'; 
   const slides = slideShowMap[slideTarget];
-  const elem = document.getElementsByClassName(target)[0];
-  const elem2 = document.getElementsByClassName(target + '-2')[0];
+  console.log(target, elemTarget);
+  const elem = document.getElementsByClassName(target)[elemTarget];
+  const elem2 = document.getElementsByClassName(target + '-2')[elemTarget];
   elem2.setAttribute('src', `${file}/${slides[1]}`);
   elem.style.setProperty('opacity', opacity);
   slideShowInterval = setInterval(() => {
