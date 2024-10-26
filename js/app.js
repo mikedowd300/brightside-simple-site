@@ -53,6 +53,8 @@
   };
 
   navigate = (page, linkId) => {
+
+    console.log(page, linkId);
     initPage({ ... pageConfigs[page] });
     // update nav
     document.querySelector('.nav-link.selected')?.classList.remove('selected');
@@ -61,6 +63,9 @@
     // update page
     newPageId = '#' + linkId.replace('-nav', '-page');
     document.querySelectorAll('.page').forEach(page => page.classList.remove('show'));
+
+    console.log(newPageId);
+    console.log(document.querySelector(newPageId).classList.add('show'));
     document.querySelector(newPageId).classList.add('show');
     // scroll to top / set focus
     window.scrollTo(0, 0);
