@@ -397,6 +397,10 @@ body {
   text-align: center;
   margin-bottom: 4px;
 }
+
+.landing-title {
+  font-size: 24px;
+}
   
 @media screen and (max-width: 699px) {
   #landing-page .content-wrapper {
