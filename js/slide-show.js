@@ -6,6 +6,7 @@ const slideShowMap = {
   'landing-page-img': ['landing-page/landing-page-2.jpg', 'landing-page/landing-page-3.jpg', 'landing-page/landing-page-4.jpg', 'landing-page/landing-page-6.jpg'],
   'nilla': ['nilla/nilla-1.jpg', 'nilla/nilla-2.jpg', 'nilla/nilla-3.jpg', 'nilla/nilla-4.jpg', 'nilla/nilla-4.jpg'],
   'cajun': ['cajun/cajun-1.jpg', 'cajun/cajun-2.jpg', 'cajun/cajun-3.jpg', 'cajun/cajun-4.jpg', 'cajun/cajun-4.jpg'],
+  'lexy': ['lexy/lexy-1.jpg', 'lexy/lexy-2.jpg'],
 }
 
 let slideShowInterval;
@@ -19,7 +20,7 @@ const slideShow = (target, interval = 4000, iterations = 10, elemTarget = 0) => 
   let opacity = 1;
   const file = 'assets'; 
   const slides = slideShowMap[slideTarget];
-  console.log(target, elemTarget);
+  console.log(target, elemTarget, slides);
   const elem = document.getElementsByClassName(target)[elemTarget];
   const elem2 = document.getElementsByClassName(target + '-2')[elemTarget];
   elem2.setAttribute('src', `${file}/${slides[1]}`);
