@@ -1,12 +1,10 @@
 const slideShowMap = {
   'buddy': ['buddy/buddy-1.jpg', 'buddy/buddy-2.jpg', 'buddy/buddy-3.jpg', 'buddy/buddy-4.jpg', 'buddy/buddy-4.jpg'],
   'max': ['max/max-1.jpg', 'max/max-2.jpg', 'max/max-3.jpg', 'max/max-4.jpg', 'max/max-5.jpg', 'max/max-6.jpg', 'max/max-7.jpg', 'max/max-8.jpg'],
-  'rosie': ['rosie/rosie-1.jpg', 'rosie/rosie-2.jpg', 'rosie/rosie-3.jpg', 'rosie/rosie-4.jpg', 'rosie/rosie-5.jpg', 'rosie/rosie-6.jpg'],
   'bailey': ['bailey/bailey-1.jpg', 'bailey/bailey-2.jpg'],
   'landing-page-img': ['landing-page/landing-page-2.jpg', 'landing-page/landing-page-3.jpg', 'landing-page/landing-page-4.jpg', 'landing-page/landing-page-6.jpg'],
-  'nilla': ['nilla/nilla-1.jpg', 'nilla/nilla-2.jpg', 'nilla/nilla-3.jpg', 'nilla/nilla-4.jpg', 'nilla/nilla-4.jpg'],
-  'cajun': ['cajun/cajun-1.jpg', 'cajun/cajun-2.jpg', 'cajun/cajun-3.jpg', 'cajun/cajun-4.jpg', 'cajun/cajun-4.jpg'],
   'lexy': ['lexy/lexy-1.jpg', 'lexy/lexy-2.jpg'],
+  'katie': ['katie/katie-1.jpg', 'katie/katie-2.jpg', 'katie/katie-3.jpg', 'katie/katie-4.jpg', 'katie/katie-5.jpg'],
 }
 
 let slideShowInterval;
