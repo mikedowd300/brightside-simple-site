@@ -174,12 +174,17 @@
 
 @media screen and (max-width: 549px) {
 
-  .accordion-info {
+  .accordion .slide-show-wrapper  {
+    width: 200px;
+  }
+
+  .parents {
+    display: flex;
     flex-direction: column;
   }
 
-  .parents .mid-info {
-    display: none;
+  .accordion-info {
+    flex-direction: column;
   }
 
   .accordion-info .mid-info.mobile {
