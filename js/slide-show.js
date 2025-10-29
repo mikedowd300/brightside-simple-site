@@ -18,7 +18,6 @@ const slideShow = (target, interval = 4000, iterations = 10, elemTarget = 0) => 
   let opacity = 1;
   const file = 'assets'; 
   const slides = slideShowMap[slideTarget];
-  console.log(target, elemTarget, slides);
   const elem = document.getElementsByClassName(target)[elemTarget];
   const elem2 = document.getElementsByClassName(target + '-2')[elemTarget];
   elem2.setAttribute('src', `${file}/${slides[1]}`);
