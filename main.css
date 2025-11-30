@@ -140,6 +140,10 @@ body {
   min-height: 500px;
 }
 
+#landing-page .content-wrapper .info-container p {
+  margin: 15.5px 0;
+}
+
 #landing-page .content-wrapper .info-container span {
   font-size: 16px;
   margin-right: 8px;
@@ -360,13 +364,13 @@ body {
 .footer {
   flex-direction: row;
   justify-content: center;
-  height: 400px;
+  height: 150px;
   align-items: flex-start;
 }
 
 .footer-link {
   font-size: 20px;
-  padding: 16px;
+  padding: 16px 16px 0;
   border: none;
   background-color: transparent;
   color: white;
@@ -400,6 +404,10 @@ body {
 
 .landing-title {
   font-size: 24px;
+}
+
+.images-label {
+  margin-bottom: 2px;
 }
   
 @media screen and (max-width: 699px) {
@@ -439,7 +447,7 @@ body {
   }
 
   .footer {
-    height: 200px;
+    height: 50px;
   }
 
   .info-desc {
@@ -454,11 +462,11 @@ body {
 
   .footer {
     flex-direction: column;
-    height: 220px;
+    height: 180px;
     align-items: center;
   }
 
   .footer .social-media-icons {
-    padding-top: 0;
+    padding-top: 8px;
   }
 }
